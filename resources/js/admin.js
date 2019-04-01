@@ -21,8 +21,8 @@ $.ajaxSetup({
 
 
 // HIDE SIDEBAR
-$(function () {
-   $('.aside-button').on('click', function () {
-       $('body').toggleClass('hide-sidebar', '');
-   })
-});
+// $(function () {
+//    $('.aside-button').on('click', function () {
+//        $('body').toggleClass('hide-sidebar', '');
+//    })
+// });

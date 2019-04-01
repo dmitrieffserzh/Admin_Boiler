@@ -10491,45 +10491,6 @@ body {
 /* OPEN ASIDE
 ===================================================================================================================== */
 
-body.hide-sidebar .main,
-body.hide-sidebar .footer {
-  margin: 0 0 0 3.5rem;
-}
-
-body.hide-sidebar .aside {
-  width: 3.5rem;
-}
-
-body.hide-sidebar .aside-button {
-  color: #a59aff;
-}
-
-body.hide-sidebar .aside-button:hover {
-  color: #fff;
-}
-
-body.hide-sidebar .main-menu .separator {
-  display: none;
-}
-
-body.hide-sidebar .main-menu__link {
-  position: relative;
-}
-
-body.hide-sidebar .main-menu__link:hover .main-menu__text {
-  display: block;
-  left: 3.5rem;
-  top: 0;
-  padding: 0 1rem 0;
-  background: #2a303c;
-  z-index: 100;
-}
-
-body.hide-sidebar .main-menu__text {
-  position: absolute;
-  display: none;
-}
-
 /* CONTENT
 ===================================================================================================================== */
 

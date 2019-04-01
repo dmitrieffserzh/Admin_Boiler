@@ -82,42 +82,41 @@ body {
 
 /* OPEN ASIDE
 ===================================================================================================================== */
-body.hide-sidebar {
-  .main,
-  .footer {
-    margin: 0 0 0 3.5rem;
-  }
-  .aside {
-    width: 3.5rem;
-    &-button {
-      color: #a59aff;
-      &:hover {
-        color: #fff;
-      }
-    }
-  }
-  .main-menu {
-    & .separator {
-      display: none;
-    }
-    &__link {
-      position: relative;
-      &:hover .main-menu__text {
-        display: block;
-        left: 3.5rem;
-        top: 0;
-        padding: 0 1rem 0;
-        background: #2a303c;
-        z-index: 100;
-      }
-    }
-    &__text {
-      position: absolute;
-      display: none;
-    }
-  }
-
-}
+//body.hide-sidebar {
+//  .main,
+//  .footer {
+//    margin: 0 0 0 3.5rem;
+//  }
+//  .aside {
+//    width: 3.5rem;
+//    &-button {
+//      color: #a59aff;
+//      &:hover {
+//        color: #fff;
+//      }
+//    }
+//  }
+//  .main-menu {
+//    & .separator {
+//      display: none;
+//    }
+//    &__link {
+//      position: relative;
+//      &:hover .main-menu__text {
+//        display: block;
+//        left: 3.5rem;
+//        top: 0;
+//        padding: 0 1rem 0;
+//        background: #2a303c;
+//        z-index: 100;
+//      }
+//    }
+//    &__text {
+//      position: absolute;
+//      display: none;
+//    }
+//  }
+//}
 
 /* CONTENT
 ===================================================================================================================== */

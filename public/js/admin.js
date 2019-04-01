@@ -10671,12 +10671,11 @@ $.ajaxSetup({
     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
   }
 }); // HIDE SIDEBAR
-
-$(function () {
-  $('.aside-button').on('click', function () {
-    $('body').toggleClass('hide-sidebar', '');
-  });
-});
+// $(function () {
+//    $('.aside-button').on('click', function () {
+//        $('body').toggleClass('hide-sidebar', '');
+//    })
+// });
 
 /***/ }),
 
