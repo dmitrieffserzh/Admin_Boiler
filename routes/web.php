@@ -28,5 +28,10 @@ Route::group([
     Route::get('test',                             [ 'as' => 'dashboards',                         'uses' => 'AdminController@index' ]);
 
     //NEWS
-    Route::get('news',                             [ 'as' => 'news',                         'uses' => 'AdminController@index' ]);
+    Route::get('news',                             [ 'as' => 'admin.news',                         'uses' => 'NewsController@index' ]);
+
+
+    //NEWS CATRGORY
+    Route::get('news/category',                    [ 'as' => 'admin.news.category',                 'uses' => 'CategoryController@index' ]);
+
 });
