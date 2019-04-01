@@ -26,4 +26,7 @@ Route::group([
     'prefix'     => 'admin'], function() {
     Route::get('/',                             [ 'as' => 'dashboard',                         'uses' => 'AdminController@index' ]);
     Route::get('test',                             [ 'as' => 'dashboards',                         'uses' => 'AdminController@index' ]);
+
+    //NEWS
+    Route::get('news',                             [ 'as' => 'news',                         'uses' => 'AdminController@index' ]);
 });
