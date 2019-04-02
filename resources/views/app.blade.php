@@ -74,6 +74,39 @@
 
         <main class="py-4">
             @yield('content')
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <div class="container">
+                <div class="row">
+
+                    @for($i=0;$i<20;$i++)
+                        <div class="col-3">
+                            <div class="products-item">
+                                <img src="test2.jpg" alt="" class="products-item__image">
+                                <h2 class="products-item__title">Тестовый продукт</h2>
+                                <div class="products-item__price">{{ rand(100,999) }} &#8381;</div>
+                                <button class="products-item__add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    @endfor
+                </div>
+            </div>
+
+
         </main>
     </div>
 </body>
