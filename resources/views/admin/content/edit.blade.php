@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.main')
 
 @section('content')
     <div class="container">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
 
-                <form action="{{ route($content_type.'.update', $post->id) }}" method="post">
+                <form action="{{ route('admin.'.$content_type.'.update', $post->id) }}" method="post">
                 @csrf
                 {{ method_field('PATCH') }}
 

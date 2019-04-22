@@ -18,7 +18,7 @@ class TaxonomyController extends Controller {
         $this->getSegmentUrl($request);
 
         $taxonomies = Taxonomy::where('content_type', $this->content_type)->get()->toTree();
-        return view('Admin.taxonomies.index',
+        return view('admin.taxonomies.index',
             [   'taxonomies'    => $taxonomies,
                 'delimiter'     => '',
                 'content_type'  => $this->content_type
@@ -29,7 +29,7 @@ class TaxonomyController extends Controller {
 
     public function taxonomiesCreate (Request $request) {
         $this->getSegmentUrl($request);
-        return view( 'Admin.taxonomies.create', [
+        return view( 'admin.taxonomies.create', [
             'taxonomy'   => null,
             'taxonomies' => Taxonomy::where('content_type', $this->content_type)->get()->toTree(),
             'delimiter'  => '',

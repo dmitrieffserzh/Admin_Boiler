@@ -9,6 +9,12 @@ use App\Http\Controllers\Controller;
 
 class PostController extends Controller {
 
+
+    public function __construct(){
+        // $this->middleware('auth');
+    }
+
+
     public $content_type;
 
     public function index(Request $request) {
@@ -16,9 +22,6 @@ class PostController extends Controller {
 
         $taxonomies = Taxonomy::where('content_type', $this->content_type)->pluck('id');
         $posts = Post::whereIn('taxonomy_id', $taxonomies)->latest()->paginate(25);
-        if (!count($posts)) {
-            abort(404);
-        }
 
         return view('Admin.content.index',
             ['posts' => $posts,

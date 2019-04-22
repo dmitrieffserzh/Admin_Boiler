@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.main')
 
 @section('content')
     <div class="container">
@@ -9,7 +9,7 @@
 
                 <h4 class="my-3">Контент
 
-                    <a class="btn btn-primary btn-sm float-right" href="{{ route( $content_type.'.create') }}">
+                    <a class="btn btn-primary btn-sm float-right" href="{{ route( 'admin.'.$content_type.'.create') }}">
                         &#10010; Создать пост
                     </a>
                 </h4>

@@ -10,6 +10,13 @@ use App\Http\Controllers\Controller;
 class NewsController extends Controller
 {
 
+
+    public function __construct(){
+        // $this->middleware('auth');
+    }
+
+
+
     public $content_type;
 
     public function index(Request $request) {
@@ -17,9 +24,6 @@ class NewsController extends Controller
 
         $taxonomies = Taxonomy::where('content_type', $this->content_type)->pluck('id');
         $posts = News::whereIn('taxonomy_id', $taxonomies)->latest()->paginate(25);
-        if (!count($posts)) {
-            abort(404);
-        }
 
         return view('admin.content.index',
             ['posts' => $posts,

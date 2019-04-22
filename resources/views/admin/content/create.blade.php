@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.main')
 
 @section('content')
     <div class="container">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
 
-                    <form action="{{ route($content_type.'.store') }}" method="POST">
+                    <form action="{{ route('admin.'.$content_type.'.store') }}" method="POST">
                         @csrf
                         @include('admin.content.partials.form')
                         <hr>
