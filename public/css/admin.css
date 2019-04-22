@@ -10518,16 +10518,28 @@ body {
 
 .main-menu__item ul {
   padding: 0;
-  margin: 0 0 1rem;
 }
 
 .main-menu__item ul li > a {
   color: #838694;
+  font-size: 0.8rem;
+}
+
+.main-menu__item ul li > a:hover {
+  background: transparent;
 }
 
 .main-menu__item.active > a {
   color: #a59aff;
-  background: #2a303c;
+}
+
+.main-menu__item.active > ul {
+  background: #2a2b2d;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.35);
+}
+
+.main-menu__item ul > .active > a {
+  color: #fff;
 }
 
 .main-menu__link {
