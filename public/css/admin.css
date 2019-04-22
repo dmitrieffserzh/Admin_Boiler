@@ -10516,6 +10516,20 @@ body {
   letter-spacing: 1px;
 }
 
+.main-menu__item ul {
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.main-menu__item ul li > a {
+  color: #838694;
+}
+
+.main-menu__item.active > a {
+  color: #a59aff;
+  background: #2a303c;
+}
+
 .main-menu__link {
   display: block;
   color: #838694;

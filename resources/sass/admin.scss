@@ -142,6 +142,17 @@ body {
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+    & ul {
+      padding: 0;
+      margin: 0 0 1rem;
+      & li > a {
+        color: #838694;
+      }
+    }
+    &.active > a {
+      color: #a59aff;
+      background: #2a303c;
+    }
   }
   &__link {
     display: block;
