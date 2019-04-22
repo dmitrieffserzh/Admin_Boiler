@@ -14,24 +14,35 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
-
-
-
+Route::get('/', 'MainController@index')->name('home');
 
 // BACKEND
-// ================================================================================================================== //
+// ADMIN ============================================================================================================ //
 Route::group([
     'namespace'  => 'Admin',
     'prefix'     => 'admin'], function() {
-    Route::get('/',                             [ 'as' => 'dashboard',                         'uses' => 'AdminController@index' ]);
-    Route::get('test',                             [ 'as' => 'dashboards',                         'uses' => 'AdminController@index' ]);
+    Route::get(  '/',                                 [ 'as' => 'admin.dashboard',                     'uses' => 'MainController@index'             ]);
 
-    //NEWS
-    Route::get('news',                             [ 'as' => 'admin.news',                         'uses' => 'NewsController@index' ]);
+    // POSTS
+    Route::get(  '/posts',                            [ 'as' => 'admin.posts.index',                   'uses' => 'PostController@index'             ]);
+    Route::get(  '/posts/create',                     [ 'as' => 'admin.posts.create',                  'uses' => 'PostController@create'            ]);
+    Route::post( '/posts/store',                      [ 'as' => 'admin.posts.store',                   'uses' => 'PostController@store'             ]);
+    Route::get(  '/posts/{id}/edit',                  [ 'as' => 'admin.posts.edit',                    'uses' => 'PostController@edit'              ]);
+    Route::patch('/posts/{id}/update',                [ 'as' => 'admin.posts.update',                  'uses' => 'PostController@update'            ]);
+    Route::get(  '/posts/{id}/delete',                [ 'as' => 'admin.posts.delete',                  'uses' => 'PostController@delete'             ]);
+    Route::get(  '/posts/categories',                 [ 'as' => 'admin.posts.category',                'uses' => 'TaxonomyController@taxonomies'        ]);
+    Route::get(  '/posts/categories/create',          [ 'as' => 'admin.posts.category.create',         'uses' => 'TaxonomyController@taxonomiesCreate'  ]);
+    Route::post( '/posts/categories/store',           [ 'as' => 'admin.posts.category.store',          'uses' => 'TaxonomyController@taxonomiesStore'   ]);
+    Route::get(  '/posts/categories/{id}/edit',       [ 'as' => 'admin.posts.category.edit',           'uses' => 'TaxonomyController@taxonomiesEdit'    ]);
+    Route::patch('/posts/categories/{id}/update',     [ 'as' => 'admin.posts.category.update',         'uses' => 'TaxonomyController@taxonomiesUpdate'  ]);
+    Route::get(  '/posts/categories/{id}/delete',     [ 'as' => 'admin.posts.category.delete',         'uses' => 'TaxonomyController@taxonomiesDelete'  ]);
 
-
-    //NEWS CATRGORY
-    Route::get('news/category',                    [ 'as' => 'admin.news.category',                 'uses' => 'CategoryController@index' ]);
-
+    // NEWS
+    Route::get(  '/news',                             [ 'as' => 'admin.news.index',                    'uses' => 'NewsController@index'             ]);
+    Route::get(  '/news/categories',                  [ 'as' => 'admin.news.category',                 'uses' => 'TaxonomyController@taxonomies'        ]);
+    Route::get(  '/news/categories/create',           [ 'as' => 'admin.news.category.create',          'uses' => 'TaxonomyController@taxonomiesCreate'  ]);
+    Route::post( '/news/categories/store',            [ 'as' => 'admin.news.category.store',           'uses' => 'TaxonomyController@taxonomiesStore'   ]);
+    Route::get(  '/news/categories/{id}/edit',        [ 'as' => 'admin.news.category.edit',            'uses' => 'TaxonomyController@taxonomiesEdit'    ]);
+    Route::patch('/news/categories/{id}/update',      [ 'as' => 'admin.news.category.update',          'uses' => 'TaxonomyController@taxonomiesUpdate'  ]);
+    Route::get(  '/news/categories/{id}/delete',      [ 'as' => 'admin.news.category.delete',          'uses' => 'TaxonomyController@taxonomiesDelete'  ]);
 });

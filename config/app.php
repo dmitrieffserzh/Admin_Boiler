@@ -226,6 +226,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+
+        // HELPERS
+        'UsersHelper' => App\Helpers\UsersHelper::class,
+        'AdminHelper' => App\Helpers\AdminHelper::class,
+
     ],
 
 ];

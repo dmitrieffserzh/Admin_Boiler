@@ -12,7 +12,7 @@
     </li>
     <li class="main-menu__item separator">Контент</li>
     <li class="main-menu__item">
-        <a href="{{ route('admin.news') }}" class="main-menu__link">
+        <a href="{{ route('admin.news.index') }}" class="main-menu__link">
             <span class="main-menu__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 30" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

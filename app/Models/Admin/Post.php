@@ -4,7 +4,7 @@ namespace App\Models\Admin;
 
 use Illuminate\Database\Eloquent\Model;
 
-class News extends Model {
+class Post extends Model {
 
     protected $table = 'con_posts';
 
