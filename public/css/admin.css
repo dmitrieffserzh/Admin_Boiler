@@ -10444,7 +10444,6 @@ body {
   width: 250px;
   background: #242b3a;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  transition: width 0.1s linear;
   z-index: 100;
 }
 
@@ -10469,7 +10468,6 @@ body {
   padding: 0 1rem;
   width: auto;
   min-height: calc(100vh - 6rem);
-  transition: margin 0.1s linear;
 }
 
 /* FOTER

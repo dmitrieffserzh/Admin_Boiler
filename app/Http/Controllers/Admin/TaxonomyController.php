@@ -48,7 +48,7 @@ class TaxonomyController extends Controller {
         $taxonomy->content_type = $this->content_type;
         $taxonomy->save();
 
-        return redirect()->route( $this->content_type.'.category' )
+        return redirect()->route( 'admin.'.$this->content_type.'.category' )
             ->with( 'status', 'Категория успешно сохранена!' );
     }
 
@@ -67,7 +67,7 @@ class TaxonomyController extends Controller {
     public function taxonomiesUpdate( Request $request, $id ) {
         $this->getSegmentUrl($request);
         Taxonomy::find( $id )->update( $request->all() );
-        return redirect()->route( $this->content_type.'.category' )
+        return redirect()->route( 'admin.'.$this->content_type.'.category' )
             ->with( 'status', 'Категория успешно обновлена!' );
     }
 
@@ -75,7 +75,7 @@ class TaxonomyController extends Controller {
     public function taxonomiesDelete( Request $request, $id ) {
         $this->getSegmentUrl($request);
         Taxonomy::find( $id )->delete();
-        return redirect()->route( $this->content_type.'.category' )
+        return redirect()->route( 'admin.'.$this->content_type.'.category' )
             ->with( 'status', 'Категория успешно удалена!' );
     }
 
