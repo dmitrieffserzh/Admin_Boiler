@@ -16,6 +16,7 @@ class TaxonomyController extends Controller
     }
 
 
+
     public function taxonomies(Request $request)
     {
         $taxonomies = Taxonomy::where('content_type', AdminHelper::getContentType($request))->get()->toTree();
@@ -58,13 +59,11 @@ class TaxonomyController extends Controller
 
     public function edit(Request $request, $id)
     {
-        AdminHelper::getContentType($request);
-
         return view('Admin.taxonomies.edit', [
+            'content_type'  => AdminHelper::getContentType($request),
             'taxonomy'      => Taxonomy::findOrFail($id),
             'taxonomies'    => Taxonomy::where('content_type', AdminHelper::getContentType($request))->get()->toTree(),
-            'delimiter'     => '',
-            'content_type'  => $this->content_type
+            'delimiter'     => ''
         ]);
     }
 
