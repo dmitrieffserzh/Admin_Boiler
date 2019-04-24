@@ -5,34 +5,15 @@ namespace App\Helpers;
 // REGISTER ON config/app.php
 class AdminHelper {
 
-    public static function get_avatar($avatar) {
-        if(is_null($avatar))
-            //return '/images/default_avatar.png';
-            return '/images/default_avatar.png';
 
-        return '/images/' . $avatar;
+    // FUNCTIONS
+    // Get the content type from the url segment
+    public static function getContentType( $request ) {
+        return $contentType = $request->segment(2);
     }
 
 
-    // GET SEX
-    public static function getSex( $sex_int ) {
-        if ( $sex_int == 1 ) {
-            return 'Мужской';
-        } else if ( $sex_int == 2 ) {
-            return 'Женский';
-        }
-        return 'Ошибка! Пол не определен!';
+    public static function getContentTypeRoute( $contentType ) {
+        return 'admin.' . $contentType . '.category';
     }
-
-    // GET ONLINE ON SEX
-    public static function getOnlineTime( $gender_int, $time ) {
-        if ( $gender_int == 2 ) {
-            return 'заходил ' . $time;
-        } elseif ( $gender_int == 1 ) {
-            return 'заходила ' . $time;
-        }
-        return $time;
-    }
-
-
 }

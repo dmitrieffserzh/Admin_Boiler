@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model {
 
-    protected $table = 'con_posts';
+    protected $table = 'con_news';
 
     public $fillable = [
         'user_id',
