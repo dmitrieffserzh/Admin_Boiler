@@ -11,7 +11,7 @@
                           "></span>
         </td>
         <td>
-            {!! $delimiter ?? "" !!}<a href="{{ route('admin.'.$content_type.'.category.edit', $taxonomy->id) }}"
+            {!! $delimiter ?? "" !!}<a href="{{ route( AdminHelper::getTaxRouteEdit($content_type), $taxonomy->id) }}"
                                        class="text-dark">{{$taxonomy->title}}</a>
         </td>
         <td class="text-muted">
@@ -19,11 +19,11 @@
         </td>
         <td class="text-muted">
             <div class="btn-group float-right" role="group">
-                <a class="btn btn-primary btn-sm" href="{{ route('admin.'.$content_type.'.category.edit', $taxonomy->id) }}"
+                <a class="btn btn-primary btn-sm" href="{{ route( AdminHelper::getTaxRouteEdit($content_type), $taxonomy->id) }}"
                    style="line-height: 1.1;">
                     &#9998;
                 </a>
-                <a href="{{ route( 'admin.'.$content_type.'.category.delete', $taxonomy->id) }}" data-method="delete"
+                <a href="{{ route( AdminHelper::getTaxRouteDelete($content_type), $taxonomy->id) }}" data-method="delete"
                    data-token="{{csrf_token()}}" data-confirm="Вы уверены?" class="btn btn-danger btn-sm"
                    style="line-height: 1.1;">
                     &#10006;

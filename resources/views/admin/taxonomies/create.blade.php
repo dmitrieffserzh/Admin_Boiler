@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <form action="{{ route('admin.'.$content_type.'.category.store') }}" method="POST">
+    <form action="{{ route( AdminHelper::getTaxRouteStore($content_type) ) }}" method="POST">
         @csrf
         @include('admin.taxonomies.partials.form')
         <hr>

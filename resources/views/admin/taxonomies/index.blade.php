@@ -3,7 +3,7 @@
 @section('content')
     <h4 class="my-3">Категории постов
 
-        <a class="btn btn-primary btn-sm float-right" href="{{ route( 'admin.'.$content_type.'.category.create') }}">
+        <a class="btn btn-primary btn-sm float-right" href="{{ route( AdminHelper::getTaxRouteCreate($content_type) ) }}">
             &#10010; Создать категорию
         </a>
     </h4>

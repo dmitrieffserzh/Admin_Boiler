@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <form action="{{ route('admin.'.$content_type.'.category.update', $taxonomy->id) }}" method="post">
+    <form action="{{ route( AdminHelper::getTaxRouteUpdate($content_type), $taxonomy->id ) }}" method="post">
         @csrf
         {{ method_field('PATCH') }}
 
