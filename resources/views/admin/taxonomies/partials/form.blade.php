@@ -22,6 +22,30 @@
 
 <div class="form-group">
     <label for="parent_id">Цвет</label>
-    <input type="text" name="color" class="form-control" id="title" aria-describedby="titleHelp"
+    <input id="color" type="text" name="color" class="form-control" id="title" aria-describedby="titleHelp"
            value="{{ $taxonomy->color ?? "" }}">
 </div>
+
+
+<div id="cp5c" class="input-group" title="Using format option">
+    <input type="text" class="form-control input-lg" value="#305AA2"/>
+    <span class="input-group-append">
+    <span class="input-group-text colorpicker-input-addon"><i></i></span>
+  </span>
+</div>
+
+<script>
+    $(function () {
+        $('#cp5c').colorpicker();
+    });
+</script>
+
+
+
+
+@push('js-components')
+    <script src="{{ asset('js/components/bootstrap-colorpicker.js') }}"></script>
+@endpush
+@push('css-components')
+    <link href="{{ asset('css/components/bootstrap-colorpicker.css') }}" rel="stylesheet">
+@endpush

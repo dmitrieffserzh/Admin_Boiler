@@ -18,4 +18,6 @@ mix
 
     // Backend
     .js('resources/js/admin.js', 'public/js')
-    .sass('resources/sass/admin.scss', 'public/css');
+    .js('resources/js/components/bootstrap-colorpicker.js', 'public/js/components')
+    .sass('resources/sass/admin.scss', 'public/css')
+    .sass('resources/sass/components/bootstrap-colorpicker.scss', 'public/css/components');
