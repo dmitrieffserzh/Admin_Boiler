@@ -13,6 +13,9 @@ class AdminHelper {
     }
 
 
+
+
+    // TAXONOMY ROUTING
     public static function getTaxRouteIndex( $content_type ) {
         return 'admin.' . $content_type . '.category';
     }
