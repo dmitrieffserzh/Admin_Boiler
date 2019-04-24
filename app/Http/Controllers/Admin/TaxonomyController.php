@@ -31,8 +31,6 @@ class TaxonomyController extends Controller
 
     public function create(Request $request)
     {
-        AdminHelper::getContentType($request);
-
         return view('admin.taxonomies.create', [
             'content_type'  => AdminHelper::getContentType($request),
             'taxonomy'      => null,
@@ -52,7 +50,7 @@ class TaxonomyController extends Controller
         $taxonomy->content_type = AdminHelper::getContentType($request);
         $taxonomy->save();
 
-        return redirect()->route(AdminHelper::getTaxRoute(AdminHelper::getContentType($request)))
+        return redirect()->route(AdminHelper::getTaxRouteIndex(AdminHelper::getContentType($request)))
             ->with('status', 'Категория успешно сохранена!');
     }
 
@@ -70,14 +68,14 @@ class TaxonomyController extends Controller
 
     public function update(Request $request, $id)
     {
-        $taxonomy = Taxonomy::findOrFail($id);
+        $taxonomy            = Taxonomy::findOrFail($id);
         $taxonomy->title     = $request->title;
         $taxonomy->slug      = $request->slug;
         $taxonomy->color     = $request->color;
         $taxonomy->parent_id = $request->parent_id;
         $taxonomy->save();
 
-        return redirect()->route(AdminHelper::getTaxRoute(AdminHelper::getContentType($request)))
+        return redirect()->route(AdminHelper::getTaxRouteIndex(AdminHelper::getContentType($request)))
             ->with('status', 'Категория успешно обновлена!');
     }
 
@@ -86,7 +84,7 @@ class TaxonomyController extends Controller
     {
         Taxonomy::findOrFail($id)->delete();
 
-        return redirect()->route(AdminHelper::getTaxRoute(AdminHelper::getContentType($request)))
+        return redirect()->route(AdminHelper::getTaxRouteIndex(AdminHelper::getContentType($request)))
             ->with('status', 'Категория успешно удалена!');
     }
 
