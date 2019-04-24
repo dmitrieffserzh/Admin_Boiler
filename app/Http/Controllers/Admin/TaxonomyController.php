@@ -16,7 +16,6 @@ class TaxonomyController extends Controller
     }
 
 
-
     public function index(Request $request)
     {
         $taxonomies = Taxonomy::where('content_type', AdminHelper::getContentType($request))->get()->toTree();
