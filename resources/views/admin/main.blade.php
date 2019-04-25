@@ -9,13 +9,12 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/admin.js') }}"></script>
-    @stack('js-components')
-
     <!-- Styles -->
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
-    @stack('css-components')
+    @stack('add_styles')
+    <!-- Scripts -->
+    <script src="{{ asset('js/admin.js') }}"></script>
+
 </head>
 <body>
 @include('admin.header')
@@ -40,6 +39,7 @@
 
 </main>
 @include('admin.footer')
+@stack('add_scripts')
 </body>
 </html>
 

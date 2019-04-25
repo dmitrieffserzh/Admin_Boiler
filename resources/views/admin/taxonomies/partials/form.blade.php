@@ -11,41 +11,32 @@
            value="{{ $taxonomy->slug ?? "" }}">
 </div>
 
-<div class="form-group">
-    <label for="parent_id">Родительская категория</label>
-
-    <select id="parent_id" class="form-control" name="parent_id">
-        <option value="0">-- без родительской --</option>
-         @include('admin.taxonomies.partials.form_item_list', ['taxonomies' => $taxonomies, 'parent' => $taxonomy['parent_id'] ])
-    </select>
+<div class="row">
+    <div class="form-group col-8">
+        <label for="parent_id">Родительская категория</label>
+        <select id="parent_id" class="form-control" name="parent_id">
+            <option value="0">-- без родительской --</option>
+            @include('admin.taxonomies.partials.form_item_list', ['taxonomies' => $taxonomies, 'parent' => $taxonomy['parent_id'] ])
+        </select>
+    </div>
+    <div id="dfdf" class="form-group col-4">
+        <label for="color_input">Цвет</label>
+            <div id="color" class="input-group" title="Выберите цвет">
+                <span class="input-group-prepend">
+                    <span class="input-group-text colorpicker-input-addon" id="inputGroupPrepend"><i></i></span>
+                    <input id="color_input" type="text" name="color" class="form-control input-lg" value="{{ $taxonomy->color ?? "" }}" aria-describedby="inputGroupPrepend"/>
+                </span>
+        </div>
+    </div>
 </div>
 
-<div class="form-group">
-    <label for="parent_id">Цвет</label>
-    <input id="color" type="text" name="color" class="form-control" id="title" aria-describedby="titleHelp"
-           value="{{ $taxonomy->color ?? "" }}">
-</div>
-
-
-<div id="cp5c" class="input-group" title="Using format option">
-    <input type="text" class="form-control input-lg" value="#305AA2"/>
-    <span class="input-group-append">
-    <span class="input-group-text colorpicker-input-addon"><i></i></span>
-  </span>
-</div>
-
-<script>
-    $(function () {
-        $('#cp5c').colorpicker();
-    });
-</script>
-
-
-
-
-@push('js-components')
-    <script src="{{ asset('js/components/bootstrap-colorpicker.js') }}"></script>
-@endpush
-@push('css-components')
+@push('add_styles')
     <link href="{{ asset('css/components/bootstrap-colorpicker.css') }}" rel="stylesheet">
+@endpush
+@push('add_scripts')
+    <script>
+        $(function () {
+            $('#color').colorpicker({});
+        });
+    </script>
 @endpush

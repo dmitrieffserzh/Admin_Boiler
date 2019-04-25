@@ -5,8 +5,11 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./_bootstrap/util/index.js');
-window.$ = window.jQuery = require('jquery');
+try {
+    window.$ = window.jQuery = require('jquery');
+    require('bootstrap');
+    require('bootstrap-colorpicker');
+} catch (e) {}
 
 // AJAX X-CSRF-TOKEN
 $.ajaxSetup({
@@ -21,8 +24,8 @@ $.ajaxSetup({
 
 
 // HIDE SIDEBAR
-// $(function () {
-//    $('.aside-button').on('click', function () {
-//        $('body').toggleClass('hide-sidebar', '');
-//    })
-// });
+$(function () {
+   $('.aside-button').on('click', function () {
+       $('body').toggleClass('hide-sidebar', '');
+   })
+});

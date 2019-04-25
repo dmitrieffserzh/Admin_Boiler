@@ -3,6 +3,5 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/admin.css": "/css/admin.css",
-    "/css/components/bootstrap-colorpicker.css": "/css/components/bootstrap-colorpicker.css",
-    "/js/components/bootstrap-colorpicker.js": "/js/components/bootstrap-colorpicker.js"
+    "/css/components/bootstrap-colorpicker.css": "/css/components/bootstrap-colorpicker.css"
 }
