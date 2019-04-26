@@ -17,7 +17,6 @@
 
 </head>
 <body>
-<div class="container">
     @include('admin.header')
     <aside class="aside">
         @include('admin.components.main-menu.menu')
@@ -28,7 +27,6 @@
         </div>
     </main>
     @include('admin.footer')
-</div>
 @stack('add_scripts')
 </body>
 </html>

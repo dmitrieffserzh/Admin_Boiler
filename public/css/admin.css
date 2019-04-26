@@ -10440,20 +10440,9 @@ body {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 200px;
+  width: 250px;
   background: #242b3a;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   z-index: 100;
-}
-
-.aside:before {
-  content: "";
-  background: #242b3a;
-  position: absolute;
-  right: 100%;
-  bottom: 0;
-  width: 9999px;
-  height: 100%;
 }
 
 .aside-button {
@@ -10473,7 +10462,7 @@ body {
 ===================================================================================================================== */
 
 .main {
-  margin: 0 0 0 200px;
+  margin: 0 0 0 250px;
   width: auto;
   min-height: calc(100vh - 6rem);
 }
@@ -10483,7 +10472,7 @@ body {
 
 .footer {
   background: #e5e5ea;
-  margin: 0 0 0 200px;
+  margin: 0 0 0 250px;
   padding: 0 1rem;
   width: auto;
   height: 2.5rem;
@@ -10501,7 +10490,7 @@ body {
 ===================================================================================================================== */
 
 .content {
-  margin: 0;
+  margin: 1rem;
   padding: 1rem;
   background: #fff;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
@@ -10517,43 +10506,49 @@ body {
 }
 
 .main-menu__item.separator {
-  padding: 1rem 0 0.5rem 1rem;
+  padding: 1rem 0 0.5rem 1.3rem;
   color: #d4d5de;
   font-size: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.main-menu__item ul {
-  padding: 0;
+.main-menu__item.active {
+  position: relative;
+  background: #2a303c;
 }
 
-.main-menu__item ul li > a {
-  color: #838694;
-  font-size: 0.8rem;
-}
-
-.main-menu__item ul li > a:hover {
-  background: transparent;
+.main-menu__item.active:before {
+  right: 0;
+  border: 10px solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: #f5f5f8;
+  top: 1rem;
+  margin-top: -10px;
 }
 
 .main-menu__item.active > a {
-  color: #a59aff;
+  color: #ffc745;
 }
 
-.main-menu__item ul > .active > a {
-  color: #fff;
+.main-menu__item.active > .main-menu-sub {
+  display: block;
 }
 
 .main-menu__link {
   display: block;
+  font-weight: 500;
   color: #838694;
   line-height: 2rem;
 }
 
 .main-menu__link:hover {
   background: #2a303c;
-  color: #a59aff;
+  color: #ffc745;
   text-decoration: none;
 }
 
@@ -10561,5 +10556,28 @@ body {
   display: inline-block;
   width: 3.5rem;
   text-align: center;
+}
+
+.main-menu-sub {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu-sub__item.active > a {
+  color: #fff;
+}
+
+.main-menu-sub__link {
+  display: block;
+  font-size: 0.8rem;
+  color: #838694;
+  line-height: 2rem;
+}
+
+.main-menu-sub__link:hover {
+  background: #2a303c;
+  color: #ffc745;
+  text-decoration: none;
 }
 

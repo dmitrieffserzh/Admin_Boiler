@@ -16,14 +16,14 @@
                             d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>Новости
         </a>
 
-        <ul>
-            <li class="main-menu__item {{ Request::routeIs('admin.news.index') ? 'active' : '' }}">
-                <a href="{{ route('admin.news.index') }}" class="main-menu__link">
+        <ul class="main-menu-sub">
+            <li class="main-menu-sub__item {{ Request::routeIs('admin.news.index') ? 'active' : '' }}">
+                <a href="{{ route('admin.news.index') }}" class="main-menu-sub__link">
                     <span class="main-menu__icon"></span>Все новости
                 </a>
             </li>
-            <li class="main-menu__item {{ Request::routeIs('admin.news.category') ? 'active' : '' }}">
-                <a href="{{ route('admin.news.category') }}" class="main-menu__link">
+            <li class="main-menu-sub__item {{ Request::routeIs('admin.news.category') ? 'active' : '' }}">
+                <a href="{{ route('admin.news.category') }}" class="main-menu-sub__link">
                     <span class="main-menu__icon"></span>Категории
                 </a>
             </li>
@@ -37,9 +37,9 @@
                         d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path
                         d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Статьи
         </a>
-        <ul>
-            <li class="main-menu__item ">
-                <a href="{{ route('admin.news.category') }}" class="main-menu__link">
+        <ul class="main-menu-sub">
+            <li class="main-menu-sub__item ">
+                <a href="{{ route('admin.news.category') }}" class="main-menu-sub__link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-right main-menu__icon"><polyline points="15 10 20 15 15 20"></polyline><path d="M4 4v7a4 4 0 0 0 4 4h12"></path></svg>Категории</a></li>
         </ul>
     </li>
@@ -49,9 +49,9 @@
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square main-menu__icon"><path
                         d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Блоги
         </a>
-        <ul>
-            <li class="main-menu__item ">
-                <a href="{{ route('admin.news.category') }}" class="main-menu__link">
+        <ul class="main-menu-sub">
+            <li class="main-menu-sub__item ">
+                <a href="{{ route('admin.news.category') }}" class="main-menu-sub__link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-right main-menu__icon"><polyline points="15 10 20 15 15 20"></polyline><path d="M4 4v7a4 4 0 0 0 4 4h12"></path></svg>Категории</a></li>
         </ul>
     </li>
@@ -61,9 +61,9 @@
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase main-menu__icon">
                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>Компании
         </a>
-        <ul>
-            <li class="main-menu__item ">
-                <a href="{{ route('admin.news.category') }}" class="main-menu__link">
+        <ul class="main-menu-sub">
+            <li class="main-menu-sub__item ">
+                <a href="{{ route('admin.news.category') }}" class="main-menu-sub__link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-down-right main-menu__icon"><polyline points="15 10 20 15 15 20"></polyline><path d="M4 4v7a4 4 0 0 0 4 4h12"></path></svg>Категории</a></li>
         </ul>
     </li>
