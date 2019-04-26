@@ -23,7 +23,7 @@
         <label for="color_input">Цвет</label>
             <div id="color" class="input-group" title="Выберите цвет">
                 <span class="input-group-prepend">
-                    <span class="input-group-text colorpicker-input-addon" id="inputGroupPrepend"><i></i></span>
+                    <span class="input-group-text colorpicker-input-addon" id="inputGroupPrepend" ><i></i></span>
                     <input id="color_input" type="text" name="color" class="form-control input-lg" value="{{ $taxonomy->color ?? "" }}" aria-describedby="inputGroupPrepend"/>
                 </span>
         </div>
