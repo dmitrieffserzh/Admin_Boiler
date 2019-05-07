@@ -34,7 +34,7 @@ class NewsController extends Controller
 
     public function create (Request $request) {
         $this->getSegmentUrl($request);
-        return view( 'Admin.content.create', [
+        return view( 'admin.content.create', [
             'taxonomy'   => null,
             'taxonomies' => Taxonomy::where('content_type', $this->content_type)->get()->toTree(),
             'delimiter'  => '',
@@ -56,7 +56,7 @@ class NewsController extends Controller
     public function edit( Request $request, $id ) {
         $this->getSegmentUrl($request);
 
-        return view( 'Admin.content.edit', [
+        return view( 'admin.content.edit', [
             'post'   => $post = News::find( $id ),
             'taxonomy' => Taxonomy::find($post->taxonomy_id),
             'taxonomies' => Taxonomy::where('content_type', $this->content_type)->get()->toTree(),

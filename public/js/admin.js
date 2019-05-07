@@ -24013,7 +24013,7 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\DEVEPOPMENT\Admin_Boiler\resources\js\admin.js */"./resources/js/admin.js");
+module.exports = __webpack_require__(/*! /home/dmitrieff/Проекты/Admin_Boiler/resources/js/admin.js */"./resources/js/admin.js");
 
 
 /***/ })
